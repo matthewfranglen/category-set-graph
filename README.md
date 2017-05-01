@@ -12,6 +12,43 @@ I.E.
  * if i give you a graph you give me the functor
  * and if i give you a functor you tell me what the graph is
 
+## What is a Graph
+
+https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)
+
+A graph consists of vertexes and edges.
+A vertex is an object and an edge is a relationship between two objects.
+An edge can be unidirectional, or bidirectional.
+
+You can represent a graph as a list of the vertexes and a list of the edges. For example:
+
+Vertexes: [1, 2, 3]
+Edges: [{1, 2}, {2, 3}, {3, 1}] // {from, to}
+
+For this I will take all edges to be unidirectional (so the existence of the edge from 1 to 2 does not mean that an edge from 2 to 1 exists).
+
+## What is category Set
+
+https://en.wikipedia.org/wiki/Category_of_sets
+
+This contains all sets.
+Every set has a morphism to every other set (except that there are no morphisms to the empty set).
+The representation of the morphisms on wikipedia is {f, from, to}
+
+## How is category Set a graph
+
+The individual sets are the vertexes and the morphisms are the edges.
+The graph this represents is (nearly) complete. The empty set has no morphisms to it.
+
+## How is a function from a singleton to category Set a graph
+
+A function from a singleton is a constant function.
+So a function from a singleton to category Set just returns category Set.
+
+() = singleton
+S = category Set
+() -> S
+
 ## Definitions
 
 https://en.wikipedia.org/wiki/Category_of_sets
@@ -19,6 +56,7 @@ https://en.wikipedia.org/wiki/Graph_(discrete_mathematics)
 https://en.wikipedia.org/wiki/Graph_(topology)
 https://en.wikipedia.org/wiki/Functor
 https://en.wikipedia.org/wiki/Homomorphism
+https://en.wikipedia.org/wiki/Constant_function
 
 ## Thoughts
 
