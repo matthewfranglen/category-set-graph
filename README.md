@@ -70,7 +70,21 @@ category X has. Since the structure in category X is that a and b have an
 isomorphism between them that means that the two values produced by the mapping
 must have an isomorphism between them.
 
-One way to preserve this is to map both values in category X to the 
+One way to preserve this is to map both values in category X to the same graph
+within category Set. Then the isomorphism is identity. This would allow a
+unidirectional graph, as the morphisms between the sets would be incidental to
+the original structure of category X.
+
+Another way would be to:
+
+ * Order the target sets arbitrarily
+ * Define a mapping from X(a) -> Set(a) where the morphisms between sets {x, y} are included if `x <= y`
+ * Define a mapping from X(b) -> Set(b) where the morphisms between sets {x, y} are included if `x >= y`
+ * Define a mapping from Set(a) -> Set(b) where the morphisms between sets are flipped
+ * Repeat this for Set(b) -> Set(a)
+
+In this case the mapping between X and Set would be a bidirectional graph as both directions would be represented.
+This solution feels a little bit better as it doesn't immediately dismiss one of the defining qualities of category X (that it has two values, not one).
 
 ## Definitions
 
