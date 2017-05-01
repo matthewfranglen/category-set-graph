@@ -74,12 +74,12 @@ This graph could be unidirectional.
 
 ## How can category X be mapped to category Set
 
-### Cheap Way
-
 The mapping between category X and category Set must retain the structure that
 category X has. Since the structure in category X is that a and b have an
 isomorphism between them that means that the two values produced by the mapping
 must have an isomorphism between them.
+
+### Cheap Way
 
 One way to preserve this is to map both values in category X to the same graph
 within category Set. Then the isomorphism is identity. This would allow a
