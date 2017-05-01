@@ -49,6 +49,17 @@ So a function from a singleton to category Set just returns category Set.
 S = category Set
 () -> S
 
+This requires that I return the entire category when provided a single value.
+
+If a more explicit graph form is required then it needs to define the vertexes, and the edges between them.
+Then a mapping between those vertexes and the sets can be defined.
+Finally a mapping between the edges and the morphisms can be defined.
+I'm not sure how the `f` (in `(f, A, B)` from wikipedia) would be resolved.
+
+This graph could be unidirectional.
+
+## How can category X be mapped to category Set
+
 ## Definitions
 
 https://en.wikipedia.org/wiki/Category_of_sets
