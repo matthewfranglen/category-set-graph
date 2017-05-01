@@ -51,6 +51,11 @@ S = category Set
 
 This requires that I return the entire category when provided a single value.
 
+## How is an arbitrary graph a value of category Set
+
+The category Set is infinite?
+If it is then any arbitrary graph can fit within it, by using some of the sets as the vertexes and then using (some of) the morphisms between those sets as the edges.
+
 If a more explicit graph form is required then it needs to define the vertexes, and the edges between them.
 Then a mapping between those vertexes and the sets can be defined.
 Finally a mapping between the edges and the morphisms can be defined.
