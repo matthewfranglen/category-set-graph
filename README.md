@@ -67,6 +67,8 @@ This graph could be unidirectional.
 
 ## How can category X be mapped to category Set
 
+### Cheap Way
+
 The mapping between category X and category Set must retain the structure that
 category X has. Since the structure in category X is that a and b have an
 isomorphism between them that means that the two values produced by the mapping
@@ -77,11 +79,13 @@ within category Set. Then the isomorphism is identity. This would allow a
 unidirectional graph, as the morphisms between the sets would be incidental to
 the original structure of category X.
 
+### Better Way?
+
 Another way would be to:
 
  * Order the target sets arbitrarily
- * Define a mapping from X(a) -> Set(a) where the morphisms between sets {x, y} are included if `x <= y`
- * Define a mapping from X(b) -> Set(b) where the morphisms between sets {x, y} are included if `x >= y`
+ * Define a mapping from X(a) -> Set(a) which includes the target sets. The morphisms between sets {x, y} are included if `x <= y`
+ * Define a mapping from X(b) -> Set(b) which includes the target sets. The morphisms between sets {x, y} are included if `x >= y`
  * Define a mapping from Set(a) -> Set(b) where the morphisms between sets are flipped
  * Repeat this for Set(b) -> Set(a)
 
@@ -90,7 +94,31 @@ This solution feels a little bit better as it doesn't immediately dismiss one of
 
 ## To define the graph given the functor
 
+Just run it! (╭☞ ͡⎚ ͜ʖ ͡⎚)╭☞
+A functor can be defined which transforms a subset of the category Set to a graph. It would:
 
+ * Map the sets to unique vertexes
+ * Map the morphisms to edges
+
+That function can be composed with the provided function to produce the graph. It should work regardless of which specific value from category X was provided.
+
+If the _better way_ was being taken then the edges that are defined should be bi directional.
+
+## To define the functor given the graph
+
+ * Map each vertex in the graph to a set.
+
+### Cheap Way
+
+ * Map each edge in the graph to the morphism between the sets.
+ * Define a constant functor which returns the mapped sets and morphisms
+
+### Better Way?
+
+ * Order the sets
+ * Define a mapping from X(a) -> Set(a) which includes the target sets. The morphisms between sets {x, y} are included if `x <= y`
+ * Define a mapping from X(b) -> Set(b) which includes the target sets. The morphisms between sets {x, y} are included if `x >= y`
+ * Define a functor which applies the appropriate mapping given the input value
 
 ## Definitions
 
