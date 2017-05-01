@@ -51,7 +51,9 @@ S = category Set
 
 This requires that I return the entire category when provided a single value.
 
-## How is an arbitrary graph a value of category Set
+So if the category Set is a graph, then a function from a singleton to the category Set is equivalent to the category Set, and is thus equivalent to a graph.
+
+## How is an arbitrary graph contained within category Set
 
 The category Set is infinite?
 If it is then any arbitrary graph can fit within it, by using some of the sets as the vertexes and then using (some of) the morphisms between those sets as the edges.
@@ -85,6 +87,10 @@ Another way would be to:
 
 In this case the mapping between X and Set would be a bidirectional graph as both directions would be represented.
 This solution feels a little bit better as it doesn't immediately dismiss one of the defining qualities of category X (that it has two values, not one).
+
+## To define the graph given the functor
+
+
 
 ## Definitions
 
