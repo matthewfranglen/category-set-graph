@@ -35,6 +35,11 @@ This contains all sets.
 Every set has a morphism to every other set (except that there are no morphisms to the empty set).
 The representation of the morphisms on wikipedia is {f, from, to}
 
+## What is the minimal mapping
+
+The minimal mapping that a function can provide is a value in category X to no value in category Set.
+
+
 ## Definitions
 
 https://en.wikipedia.org/wiki/Category_of_sets
