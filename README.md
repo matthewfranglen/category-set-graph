@@ -46,6 +46,31 @@ I have defined this as Lib.toSingleton
 Are these functors?
 I don't think they are.
 
+## Functor
+
+The haskell idea of a functor is something that provides fmap. I don't think that definition is applicable to this problem.
+
+The mathematical definition of a functor is a mapping between two categories. Quoting:
+
+    Let C and D be categories. A functor F from C to D is a mapping that:
+
+        associates to each object X in C an object F ( X ) in D,
+        associates to each morphism f : X → Y in C a morphism F ( f ) : F ( X ) → F ( Y ) in D such that the following two conditions hold:
+                F ( id X ) = id F ( X ) for every object X in C,
+                F ( g ∘ f ) = F ( g ) ∘ F ( f ) for all morphisms f : X → Y and g : Y → Z in C.
+
+    That is, functors must preserve identity morphisms and composition of morphisms.
+
+This seems a pretty reasonable definition, and means that:
+(for this category X object A is denoted _Xa_, category X object B is denoted _Xb_).
+
+ * toNothing _is not_ a functor
+   because it doesn't map an object in category X to an object in category Set
+
+ * toSingleton _is_ a functor
+   because it maps `Xa -> ()` and `Xb -> ()`
+   and the morphisms present between Xa and Xb are preserved as the `id` morphism.
+
 
 ## Definitions
 
