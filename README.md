@@ -71,6 +71,13 @@ This seems a pretty reasonable definition, and means that:
    because it maps `Xa -> ()` and `Xb -> ()`
    and the morphisms present between Xa and Xb are preserved as the `id` morphism.
 
+The current implementation is incorrect. It has the signature:
+
+    CategoryX xv -> CategorySet [sv]
+
+i.e. it maps an object in category X to a list of objects in category Set.
+The definition of a functor does not support this.
+
 
 ## Definitions
 
