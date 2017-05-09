@@ -8,9 +8,12 @@ module Types
 
 data CategoryX = A
                | B
+                 deriving Show
+
 
 data Set s v = Set s v
              | SingletonSet
+               deriving Show
 
 data CategorySet s = CategorySet s
 
