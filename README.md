@@ -38,6 +38,7 @@ The representation of the morphisms on wikipedia is {f, from, to}
 ## What is the minimal mapping
 
 The minimal mapping that a function can provide is a value in category X to no value in category Set.
+I have defined this as Lib.toNothing
 
 
 ## Definitions

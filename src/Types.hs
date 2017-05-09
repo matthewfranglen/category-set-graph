@@ -18,7 +18,7 @@ data Set s v = Set s v
              | SingletonSet
                deriving Show
 
-data CategorySet s = CategorySet s
+data CategorySet s = CategorySet [s]
                      deriving Show
 
 getXA = A
