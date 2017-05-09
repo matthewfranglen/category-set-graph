@@ -1,16 +1,17 @@
 module Lib
     ( someFunc
-    , toNothing
+--  , toNothing
     , toSingleton
     ) where
 
 import Types
 
-toNothing :: Types.CategoryX -> Types.CategorySet (Types.Set s)
-toNothing _ = Types.makeCategorySet []
+-- With the change in data types this is no longer legal
+-- toNothing :: Types.CategoryX -> Types.CategorySet (Types.Set s)
+-- toNothing _ = Types.makeCategorySet Void
 
 toSingleton :: Types.CategoryX -> Types.CategorySet (Types.Set s)
-toSingleton _ = Types.makeCategorySet $ [Types.getSingletonSet]
+toSingleton _ = Types.makeCategorySet $ Types.getSingletonSet
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"

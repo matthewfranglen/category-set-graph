@@ -78,6 +78,14 @@ The current implementation is incorrect. It has the signature:
 i.e. it maps an object in category X to a list of objects in category Set.
 The definition of a functor does not support this.
 
+## Family of Sets
+
+So I have to map to a single set.
+A set can contain other sets, so instead my functor can map to such a set.
+Google leads me to believe this is described as a [Family of sets](https://en.wikipedia.org/wiki/Family_of_sets).
+
+So I can have my mapping from category X to a collection of sets.
+
 
 ## Definitions
 

@@ -16,9 +16,10 @@ data CategoryX = A
 
 data Set s = Set s
            | SingletonSet
+           | FamilyOfSets [Set s]
              deriving Show
 
-data CategorySet s = CategorySet [s]
+data CategorySet s = CategorySet s
                      deriving Show
 
 getXA = A
