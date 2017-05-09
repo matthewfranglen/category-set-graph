@@ -6,10 +6,10 @@ module Lib
 
 import Types
 
-toNothing :: Types.CategoryX -> Types.CategorySet (Types.Set s v)
+toNothing :: Types.CategoryX -> Types.CategorySet (Types.Set s)
 toNothing _ = Types.makeCategorySet []
 
-toSingleton :: Types.CategoryX -> Types.CategorySet (Types.Set s v)
+toSingleton :: Types.CategoryX -> Types.CategorySet (Types.Set s)
 toSingleton _ = Types.makeCategorySet $ [Types.getSingletonSet]
 
 someFunc :: IO ()

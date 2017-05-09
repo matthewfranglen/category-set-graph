@@ -14,9 +14,9 @@ data CategoryX = A
                  deriving Show
 
 
-data Set s v = Set s v
-             | SingletonSet
-               deriving Show
+data Set s = Set s
+           | SingletonSet
+             deriving Show
 
 data CategorySet s = CategorySet [s]
                      deriving Show
