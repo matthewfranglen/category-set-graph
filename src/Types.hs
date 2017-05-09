@@ -4,6 +4,9 @@ module Types
     , getSingletonSet
     , makeSet
     , makeCategorySet
+    , CategoryX
+    , CategorySet
+    , Set
     ) where
 
 data CategoryX = A
@@ -16,6 +19,7 @@ data Set s v = Set s v
                deriving Show
 
 data CategorySet s = CategorySet s
+                     deriving Show
 
 getXA = A
 getXB = B
