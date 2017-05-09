@@ -86,6 +86,18 @@ Google leads me to believe this is described as a [Family of sets](https://en.wi
 
 So I can have my mapping from category X to a collection of sets.
 
+The problem still remains that I am mapping to a constant.
+I can define a function `F = category X -> category Set`
+Since category X is two values the easiest way to define this function is to ignore the input.
+The second easiest is to define _two_ functions which ignore their input and use one for Xa and one for Xb.
+Those functions then return the desired family of sets: FSa and FSb.
+
+Two separate morphisms must exist between FSa and FSb.
+In category X are these bijections? The values in category X are not defined to be sets, so I think not.
+I think that morphism relation still holds, and doesn't intrude inside the set, so it is equally not a bijection.
+It is not a mapping of the sets within the family of sets.
+It is a mapping of the family as a whole, treated as a single object.
+This is because the function from category X to category Set is `F = X -> Family of Sets`.
 
 ## Definitions
 
