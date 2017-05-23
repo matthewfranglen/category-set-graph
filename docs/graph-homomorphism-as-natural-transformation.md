@@ -10,3 +10,16 @@ This means that every object in category C must have a morphism between the corr
 This does not establish that a morphism from g(C) to f(C) exists. It would only occur if the morphism were an isomorphism, which would make the natural transformation a natural isomorphism.
 
 This is fine because if functor f is a bijection and functor g is a constant function then the morphism from f(C) to g(C) cannot be an isomorphism if there is more than one object in category C. All that is required is a structure preserving (set of morphisms?) (or must it be a single morphism?) from each object f(C) to g(C).
+
+An example of this in haskell is Maybe.
+
+The functor f(C) is Just.
+The functor g(C) is Nothing.
+The morphism between all f(C) and g(C) is Nothing.
+
+```haskell
+fC = Just
+gC _ = Nothing
+natfCgC _ = Nothing
+```
+
