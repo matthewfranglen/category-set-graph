@@ -56,4 +56,6 @@ F(b) -> V
 F(s) -> fst
 F(t) -> snd
 
+(note: I believe that this definition requires that every vertex in the graph be both the source of an edge and destination of an edge)
+
 We then want to demonstrate that two separate graphs which have a graph homomorphism between them are equivalent to a natural transformation.
