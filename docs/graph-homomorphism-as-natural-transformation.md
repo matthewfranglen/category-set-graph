@@ -38,3 +38,22 @@ Nothing
 # Graph Homomorphism
 
 # Equivalence
+
+Given the definitions from pauls previous test, we have:
+
+Given the category X which contains two objects, a and b.
+Given the category Set.
+Given the two endomorphisms from a to b, s and t.
+Given the functor from X to Set, F.
+
+We then equate this to a graph by stating that:
+
+A graph consists of vertexes V.
+A graph consists of edges E, which are defined as products of vertexes V x V.
+
+F(a) -> V x V
+F(b) -> V
+F(s) -> fst
+F(t) -> snd
+
+We then want to demonstrate that two separate graphs which have a graph homomorphism between them are equivalent to a natural transformation.
