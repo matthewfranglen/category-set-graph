@@ -34,3 +34,7 @@ Nothing
 ghci ➜ (η . f) 1
 Nothing
 ```
+
+# Graph Homomorphism
+
+# Equivalence
