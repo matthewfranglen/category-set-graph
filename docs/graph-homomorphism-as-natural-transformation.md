@@ -65,3 +65,18 @@ F(t) -> snd
 (note: I believe that this definition requires that every vertex in the graph be both the source of an edge and destination of an edge)
 
 We then want to demonstrate that two separate graphs which have a graph homomorphism between them are equivalent to a natural transformation.
+
+So the graph homomorphism between them is
+ * A mapping between the vertex sets
+ * Which maps adjacent vertices to adjacent vertices (i.e. it maps edges too)
+
+This means that given:
+ * A mapping from category X to category Set, F
+ * A mapping from category X to category Set, G
+
+Then the two sets of graph edges are F(a) and G(a), and the two sets of graph vertices are F(b) and G(b).
+Therefore the graph homomorphism is a mapping from F(a) to G(a) _and_ the mapping from F(b) to G(b).
+
+Since this graph homomorphism is defined as a mapping between functors for every value in category C it therefore meets the definition of a natural transformation.
+
+> There is a natural transformation from F to G if, for every object X in category C, there is an endomorphism from F(X) to G(X).
