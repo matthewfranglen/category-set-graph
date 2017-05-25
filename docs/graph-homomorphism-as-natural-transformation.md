@@ -37,6 +37,12 @@ Nothing
 
 # Graph Homomorphism
 
+A graph homomorphism is a mapping between graphs which respects their structure. Wikipedia:
+
+> it is a function between the vertex sets of two graphs that maps adjacent vertices to adjacent vertices.
+
+https://en.wikipedia.org/wiki/Graph_homomorphism
+
 # Equivalence
 
 Given the definitions from pauls previous test, we have:
