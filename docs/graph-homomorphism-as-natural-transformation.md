@@ -1,8 +1,8 @@
 # Natural Transformation
 
-Given a category C and a category D.
-Given a functor F from C to D.
-Given a functor G from C to D.
+ * Given a category C and a category D.
+ * Given a functor F from C to D.
+ * Given a functor G from C to D.
 There is a natural transformation from F to G if, for every object X in category C, there is an endomorphism from F(X) to G(X).
 
 This means that every object X in category C must have a morphism between the corresponding objects in category D, after the two functors have been applied. That is a morphism from F(X) to G(X).
@@ -14,9 +14,9 @@ All that is required is a structure preserving (set of morphisms?) (or must it b
 
 An example of this in haskell is Maybe.
 
-The functor F(X) is Just.
-The functor G(X) is Nothing.
-The morphism between all F(X) and G(X) is Nothing.
+ * The functor F(X) is Just.
+ * The functor G(X) is Nothing.
+ * The morphism between all F(X) and G(X) is Nothing.
 
 ```haskell
 f x = Just x
@@ -47,20 +47,22 @@ https://en.wikipedia.org/wiki/Graph_homomorphism
 
 Given the definitions from pauls previous test, we have:
 
-Given the category X which contains two objects, a and b.
-Given the category Set.
-Given the two endomorphisms from a to b, s and t.
-Given the functor from X to Set, F.
+ * Given the category X which contains two objects, a and b.
+ * Given the category Set.
+ * Given the two endomorphisms from a to b, s and t.
+ * Given the functor from X to Set, F.
 
 We then equate this to a graph by stating that:
 
-A graph consists of vertexes V.
-A graph consists of edges E, which are defined as products of vertexes V x V.
+ * A graph consists of vertexes V.
+ * A graph consists of edges E, which are defined as products of vertexes V x V.
 
+```
 F(a) -> V x V
 F(b) -> V
 F(s) -> fst
 F(t) -> snd
+```
 
 (note: I believe that this definition requires that every vertex in the graph be both the source of an edge and destination of an edge)
 
