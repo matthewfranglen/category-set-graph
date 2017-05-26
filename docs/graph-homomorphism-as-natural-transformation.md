@@ -3,6 +3,7 @@
  * Given a category C and a category D.
  * Given a functor F from C to D.
  * Given a functor G from C to D.
+ 
 There is a natural transformation from F to G if, for every object X in category C, there is an endomorphism from F(X) to G(X).
 
 This means that every object X in category C must have a morphism between the corresponding objects in category D, after the two functors have been applied. That is a morphism from F(X) to G(X).
