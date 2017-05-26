@@ -17,7 +17,7 @@ An example of this in haskell is Maybe.
 
  * The functor F(X) is Just.
  * The functor G(X) is Nothing.
- * The morphism between all F(X) and G(X) is Nothing.
+ * The morphism between all F(X) and G(X) is Nothing (see [this issue though](https://github.com/matthewfranglen/category-set-graph/issues/1))
 
 ```haskell
 f x = Just x
