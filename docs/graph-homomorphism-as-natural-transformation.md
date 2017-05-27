@@ -12,7 +12,7 @@ There is a natural transformation from F to G if, for every object X in category
 This means that every object X in category C must have a morphism between the corresponding objects in category D, after the two functors have been applied. That is a morphism from F(X) to G(X).
 
 This does not establish that a morphism from G(X) to F(X) exists. It would only occur if the morphism were an isomorphism, which would make the natural transformation a natural isomorphism.
-[Paul: This is indeed an important point.  I'll only add that there could be a morphism G(X) -> F(X) which is not the inverse of the given morphism F(X) -> G(X), so even if there is a natural transformation D -> C it is not necessarily true that the original one C -> D is an isomorphism.  But in any case, the point your making is correct: a natural transformation only gives you morphisms in one direction.]
+[Paul: This is indeed an important point.  I'll only add that there could be a morphism G(X) -> F(X) which is not the inverse of the given morphism F(X) -> G(X), so even if there is a natural transformation D -> C it is not necessarily true that the original one C -> D is an isomorphism.  But in any case, the point you're making is correct: a natural transformation only gives you morphisms in one direction.]
 
 This is fine because if functor F is a bijection and functor G is a constant function then the morphism from F(X) to G(X) cannot be an isomorphism if there is more than one object X in category C.
 All that is required is a structure preserving (set of morphisms?) (or must it be a single morphism?) from each object F(X) to G(X).
