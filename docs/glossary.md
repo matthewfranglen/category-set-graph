@@ -35,5 +35,12 @@ https://en.wikipedia.org/wiki/Functor
 ### Natural Transformation
 
 A mapping from one functor to another which preserves the morphisms of the categories of the functors.
+This is defined as a mapping of both the objects in the categories and the morphisms in the categories.
+
+To try to represent this in haskell
+
+```haskell
+η :: (a -> b) -> (a -> b)
+```
 
 https://en.wikipedia.org/wiki/Natural_transformation
