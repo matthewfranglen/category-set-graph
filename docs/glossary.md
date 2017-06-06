@@ -18,6 +18,13 @@ The [page for it](https://en.wikipedia.org/wiki/Morphism) states the following:
 
 A morphism from a category to itself.
 
+### Isomorphism
+
+A morphism which has an inverse morphism.
+Applying one after the other is equivalent to the identity function.
+
+Given _f: X → Y_ and _g: Y → X_ these form an isomorphism if _g ∘ f = id(X)_ and _f ∘ g = id(Y)_.
+
 ### Functor
 
 A mapping from one category to another category which preserves morphisms.
