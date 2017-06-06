@@ -54,15 +54,56 @@ I think that structure can be more general than morphisms so all functors are mo
 
 https://en.wikipedia.org/wiki/Functor
 
-### Natural Transformation
-
-A mapping from one functor to another which preserves the morphisms of the categories of the functors.
-This is defined as a mapping of both the objects in the categories and the morphisms in the categories.
-
-To try to represent this in haskell
+In haskell I can define two categories by starting with the objects within them:
 
 ```haskell
-η :: (a -> b) -> (a -> b)
+data CatA = AA | AB
+    deriving Show
+
+data CatB = BA | BB
+    deriving Show
 ```
 
+I can then define some internal structure by defining the arrow f:
+
+```haskell
+f :: CatA -> CatA
+f AA = BB
+f BB = AA
+```
+
+If I define a functor from CatA to CatB, then it must preserve structure. So there must be an arrow equivalent to f in CatB:
+
+```haskell
+g :: CatB -> CatB
+g BA = BB
+g BB = BA
+```
+
+So given that I can define the functor from CatA to CatB:
+
+```haskell
+functor :: CatA -> CatB
+functor AA = BA
+functor AB = BB
+```
+
+Unfortunately at this point I need to be able to define a mapping from CatB to CatA to define the mapping from f to g automatically.
+This is not part of the definition of a functor.
+So it must be that you explicitly state it:
+
+```haskell
+functor' :: (CatA -> CatA) -> (CatB -> CatB)
+functor' f = functor . f . inverse
+    where inverse :: CatB -> CatA
+          inverse BA = AA
+          inverse BB = AB
+```
+
+### Natural Transformation
+
+A mapping from one functor to another which preserves the arrows of the categories of the functors.
+This is defined as a mapping of both the objects in the categories and the arrows in the categories.
+
 https://en.wikipedia.org/wiki/Natural_transformation
+https://www.johndcook.com/blog/2017/03/16/natural-transformations/

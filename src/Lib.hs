@@ -1,17 +1,30 @@
-module Lib
-    ( someFunc
---  , toNothing
-    , toSingleton
-    ) where
-
-import Types
-
--- With the change in data types this is no longer legal
--- toNothing :: Types.CategoryX -> Types.CategorySet (Types.Set s)
--- toNothing _ = Types.makeCategorySet Void
-
-toSingleton :: Types.CategoryX -> Types.CategorySet (Types.Set s)
-toSingleton _ = Types.makeCategorySet $ Types.getSingletonSet
+module Lib where
 
 someFunc :: IO ()
 someFunc = putStrLn "someFunc"
+
+data CatA = AA
+          | AB
+            deriving (Eq, Show)
+
+data CatB = BA
+          | BB
+            deriving (Eq, Show)
+
+f :: CatA -> CatA
+f AA = AB
+f AB = AA
+
+g :: CatB -> CatB
+g BA = BB
+g BB = BA
+
+functor :: CatA -> CatB
+functor AA = BA
+functor AB = BB
+
+functor' :: (CatA -> CatA) -> (CatB -> CatB)
+functor' f = functor . f . inverse
+    where inverse :: CatB -> CatA
+          inverse BA = AA
+          inverse BB = AB
