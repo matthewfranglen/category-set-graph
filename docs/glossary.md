@@ -16,7 +16,7 @@ The [page for it](https://en.wikipedia.org/wiki/Morphism) states the following:
 
 ### Endomorphism
 
-A mapping from a category to itself which preserves structure.
+A morphism from a category to itself.
 
 ### Functor
 
@@ -24,3 +24,9 @@ A mapping from one category to another category which preserves morphisms.
 I think that structure can be more general than morphisms so all functors are morphisms, but not all morphisms are functors.
 
 https://en.wikipedia.org/wiki/Functor
+
+### Natural Transformation
+
+A mapping from one functor to another which preserves the morphisms of the categories of the functors.
+
+https://en.wikipedia.org/wiki/Natural_transformation
