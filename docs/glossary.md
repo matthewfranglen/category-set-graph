@@ -2,6 +2,28 @@ https://en.wikipedia.org/wiki/Glossary_of_category_theory
 https://en.wikipedia.org/wiki/Mathematical_notation
 https://en.wikipedia.org/wiki/List_of_mathematical_symbols
 
+### Object
+
+A category is a collection of objects.
+
+This definition doesn't actually define what an object _is_.
+I'm not sure it matters.
+
+### Arrow
+
+In the blog post it describes them as:
+
+> Usually these “arrows” are functions, but in general they don’t have to be.
+
+That would mean that they are not morphisms or functors as they don't have to preserve structure (they are the structure).
+They are always within the category.
+
+### Category
+
+A category is a collection of objects and arrows between objects.
+
+https://www.johndcook.com/blog/2017/03/16/natural-transformations/
+
 ### Morphism
 
 A mapping from one category to another category which preserves structure.
