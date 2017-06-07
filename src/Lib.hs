@@ -13,7 +13,7 @@ data CatB = BA
           | BB
             deriving (Eq, Show)
 
-type GA = (CatB -> CatB)
+type GB = (CatB -> CatB)
 
 f :: CatA -> CatA
 f AA = AB
@@ -27,7 +27,7 @@ functor :: CatA -> CatB
 functor AA = BA
 functor AB = BB
 
-functor' :: FA -> GA
+functor' :: FA -> GB
 functor' f = functor . f . inverse
     where inverse :: CatB -> CatA
           inverse BA = AA
