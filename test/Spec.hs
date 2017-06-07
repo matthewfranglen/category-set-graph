@@ -3,7 +3,8 @@ import Test.QuickCheck
 import Lib
 
 main :: IO ()
-main = quickCheck prop_functor
+main = do
+    quickCheck prop_functor
 
 prop_functor :: CatA -> Bool
 prop_functor x = (functor . f) x == (g . functor) x
