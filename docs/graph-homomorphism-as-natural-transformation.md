@@ -7,7 +7,10 @@
 There is a natural transformation from F to G if, for every object X in category C, there is an endomorphism from F(X) to G(X).
 [Paul: Two points:
 1. The word "endomorphism" usually means a morphism from an object to itself.  In this case F(X) and G(X) are generally distinct, so you would just have a "morphism" from F(X) to G(X) rather than an "endomorphism".
-2. Not just any collection of morphisms F(x) -> G(X) (ranging over objects X in C) determines a natural transformation: the collection must also be compatible with the morphisms of C.  More on that below.]
+2. Not just any collection of morphisms F(X) -> G(X) (ranging over objects X in C) determines a natural transformation: the collection must also be compatible with the morphisms of C.  More on that below.]
+[Response:
+1. So the natural transformation can be between different categories? Both F and G are defined as being mappings to category D, so the mapping between them must be an endomorphism.
+2. So it must preserve morphisms. That means that the mapping between F(x) -> G(X) must be a functor?]
 
 This means that every object X in category C must have a morphism between the corresponding objects in category D, after the two functors have been applied. That is a morphism from F(X) to G(X).
 
