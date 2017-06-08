@@ -90,6 +90,7 @@ F(t) -> snd
 Consider the graph whose vertext set is V = {1,2,3,4} and whose edge set is E = {e=(1,2), f=(2,3)}.  So this is the path graph on the vertices 1,2,3 (a DAG) together with the isolated vertex 4.  Let us construct the functor X -> *Set* which corresponds to this graph.
 
 As usual we set F(a) = E and F(b) = V.  Define F(s): F(a) -> F(b) by F(s)(e) = 1 and F(s)(f) = 2, and define F(t): F(a) -> F(b) by F(t)(e) = 2 and F(t)(f) = 3. The vertices 3 and 4 do not lie in the range of F(s), and the vertices 1 and 4 do not lie in the range of F(t), but that's ok - these are still well-defined functions.]
+[Response: We discussed this explicitly; now that I view the mapping as between categories, without intruding on the content of the categories, I can see exactly how an incomplete graph can be defined in this way]
 
 We then want to demonstrate that two separate graphs which have a graph homomorphism between them are equivalent to a natural transformation.
 
@@ -114,6 +115,40 @@ So let's review the compatibility part of the definition of natural transformati
 * The composition G(s) η(a) - first apply η(a) to get from F(a) to G(a), then apply G(s) to get from G(a) to G(b).
 * The composition η(b) F(s) - first apply F(s) to get from F(a) to F(b), then apply η(b) to get from F(b) to G(b).
 
-You must check that these two compositions are equal.  I'll leave you to it!  
+You must check that these two compositions are equal.  I'll leave you to it!]
+[Response: This is shown on the wikipedia page as the commuting diagram of the natural transformation. I've been watching a series of videos where Bartosz Milewski describes a natural transformation as:
+
+> It's often said that a natural transformation maps objects to morphisms and morphisms to (commuting) diagrams.
+
+The diagram is formed of the following parts:
+
+ * F(a) and F(b) connected by the morphism F(f)
+ * G(a) and G(b) connected by the morphism G(f)
+ * f itself is _either_ s or t from the original post on graphs as functors (s,t:a→b). Both s and t will map to a separate commuting diagram.
+
+ * η(a): F(a) -> G(a)
+ * η(b): F(b) -> G(b)
+
+These morphisms form the 4 edges of the diagram, and the 4 corners are F(a), F(b), G(a) and G(b).
+
+Going further from the post you made, we have definitions for F(a) and F(b):
+
+ * F(a) = E (defined as V x V)
+ * F(b) = V
+
+Then F(s) (defined as π1) returns the first vertex in the V x V product E, and F(t) (defined as π2) returns the second.
+
+(I feel like I have just repeated what you have said at this point heh).
+
+Since the graph homomorphism maps the corners of the diagram (i.e. the edges and vertexes), which I previously described. This means that η(a) (which is F(a) to G(a)) and η(b) (which is F(b) to G(b)) are already defined as the graph homomorphism itself.
+
+We are operating over graphs, and in your post you demonstrate that any graph can be produced by a functor from category C.
+A functor must map the morphisms between the objects of category C, so s and t are mapped into the π1 and π2 morphisms (this applies to both functors F and G independently, which is why I tried not to name them).
+It is these morphisms, π1 and π2, which map into the commuting diagram.
+In fact a given commuting diagram uses only one morphism, so I can define π1 as F(s) or G(s) (I really need to work on my language, this is so confusingly worded).
+This all leads to the fact that the composition of η(b) F(s) must be equivalent to G(s) η(a) as
+
+ * η(a) and η(b) are defined by the graph homomorphism itself
+ * F(s) and G(s) are the same morphism in category C so for F or G to be a functor it _must_ preserve them.
 
 > There is a natural transformation from F to G if, for every object X in category C, there is an endomorphism from F(X) to G(X).
