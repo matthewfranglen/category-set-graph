@@ -74,6 +74,8 @@ We then equate this to a graph by stating that:
 [Paul: Note: the edge set E is a subset of V x V, not necessarily all of V x V.  Indeed, the edge set is all of V x V if and only if G is the complete directed graph on the vertex set V.
 
 Actually, if one wants to consider directed multigraphs (multiple edges between the same pair of vertices are allowed) then you can't really even think of E as a subset of V x V.  Instead you think of E as just an abstract set equipped with a map E -> V x V which sends every edge e to its source and target.  This fits well with the functorial definition of a graph.]
+[Response: Yes, absolutely. I guess I am struggling to communicate the distinction between a complete graph, i.e. one where every combination of V x V exists, and an incomplete graph.
+Perhaps there is a standard mathematical phrasing to distinguish this, along the lines of _given object X in category C_]
 
 ```
 F(a) -> V x V
