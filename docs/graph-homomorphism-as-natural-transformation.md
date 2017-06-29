@@ -196,3 +196,23 @@ category X -> category Set
  * a -> b via t is destination vertexes
 
 So then \eta is the natural transformation from F_1 to F_2.
+
+When I draw these out they look like:
+
+```
+ G_1(a) -> F_1(s) -> G_1(b)
+   |                   |
+ \eta_a              \eta_b
+   V                   V
+ G_2(a) -> F_2(s) -> G_2(b)
+```
+
+and
+
+```
+ G_1(a) -> F_1(t) -> G_1(b)
+   |                   |
+ \eta_a              \eta_b
+   V                   V
+ G_2(a) -> F_2(t) -> G_2(b)
+```
