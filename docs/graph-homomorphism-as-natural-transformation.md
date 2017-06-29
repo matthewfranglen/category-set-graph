@@ -216,3 +216,29 @@ and
    V                   V
  G_2(a) -> F_2(t) -> G_2(b)
 ```
+
+The requirement is to prove that:
+
+ * \eta_b composed with F_1(s)
+ * is the same as F_2(s) composed with \eta_a
+ * (and similarly with t).
+
+### Language
+
+This is a mathematical language problem, not a conceptual one. The commuting diagrams and the composability of the arrows means that these conditions must hold.
+
+I do believe that
+
+ * \eta_b composed with F_1(s)
+
+Is like going from `G_1(a) through F_1(s) to G_1(b)` and then going from `G_1(b) through \eta_b to G_2(b)` (i.e. top diagram across then down). This is composing the arrows.
+
+Equally
+
+ * F_2(s) composed with \eta_a
+
+Is like going from `G_1(a) through \eta_a to G_2(a)` and then going from `G_2(a) through F_2(s) to G_2(b)` (i.e. top diagram down then across). This is also just composing the arrows.
+
+The natural transformation _requires_ that this hold. This is because the natural transformation preserves the structure, and the structure is `s` and `t`.
+
+I'm not sure how to state this precisely in mathematical language so I'll have to discuss that.
