@@ -152,3 +152,9 @@ This all leads to the fact that the composition of η(b) F(s) must be equivalent
  * F(s) and G(s) are the same morphism in category C so for F or G to be a functor it _must_ preserve them.
 
 > There is a natural transformation from F to G if, for every object X in category C, there is an endomorphism from F(X) to G(X).
+
+
+
+
+
+[Paul]: As i recall, the last step of the graph homomorphism / natural transformation problem was as follows: given graphs G_1 and G_2 corresponding to functors F_1 and F_2 from X to Set and a graph homomorphism \phi: G_1 -> G_2, you correctly identified that the components of the corresponding natural transformation are the maps \eta_a: F_1(a) -> F_2(a) and \eta_b: F_2(b) -> F_2(b) given by the edge map E_1 -> E_2 and the vertex map V_1 -> V_2 that together form \phi.  But to prove that \eta so defined really is a natural transformation, you must also check that \eta_a and \eta_b are compatible, in the sense that \eta_b composed with F_1(s) is the same as F_2(s) composed with \eta_a (and similarly with t).  To do this you should use the compatibility condition in the definition of graph homomorphism.  It's not a laborious computation, but it's a good way to force yourself to get the language down
