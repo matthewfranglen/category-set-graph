@@ -182,3 +182,17 @@ But to prove that \eta so defined really is a natural transformation, you must a
  * (and similarly with t).
 
 To do this you should use the compatibility condition in the definition of graph homomorphism.  It's not a laborious computation, but it's a good way to force yourself to get the language down.
+
+### Notes
+
+category X -> category Set
+
+ * When this produces graph G_1 in category Set then the functor is F_1
+ * When this produces graph G_2 in category Set then the functor is F_2
+
+ * category X(a) -> category Set(edges)
+ * category X(b) -> category Set(vertexes)
+ * a -> b via s is source vertexes
+ * a -> b via t is destination vertexes
+
+So then \eta is the natural transformation from F_1 to F_2.
